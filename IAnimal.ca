@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
+
+//part 2
+namespace LabInterfacepart2
+{
+
+
+
+
+
+     public interface IAnimal
+    {
+        string Name { get; set; }
+        string Colour { get; set; }
+
+        double Height { get; set; }
+        int Age { get; set; }
+
+         void  Eat();
+
+        string Cry();
+    }
+    class Dog : IAnimal
+    {
+        public string Name { get; set ; }
+        public string Colour { get ; set; }
+        public double Height { get ; set; }
+        public int Age { get; set; }
+
+        public void Eat()
+        {
+            Console.WriteLine("Dog eats meat");
+        }
+
+
+        public string Cry()
+        {
+            return "Woof";
+        }
+    }
+
+
+     class Cat: IAnimal
+    {
+
+        public string Name { get; set; }
+        public string Colour { get; set; }
+        public double Height { get; set; }
+        public int Age { get; set ; }
+        public void Eat()
+        {
+            Console.WriteLine("Cat eats mice");
+        }
+
+        public string Cry()
+        {
+            return "Meow";
+        }
+
+    }
+
+
+}
